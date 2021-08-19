@@ -1,18 +1,31 @@
-$HUEN: 200;
+$HUEN: 10;
 $HUEW: 0;
 $HUEC: 145;
 $padd: 2rem 4rem 2rem 4rem;
 $Qmargin: 1rem 3rem 1rem;
-@mixin colormatchtheme($name, $color) {
+@mixin colormatchtheme($name, $HUEN) {
     #{$name} {
         >div, .start .Button, .text {
         // "Hey patrick know what's funnier than 24.....25.
-        background-color: lighten(adjust-hue($color, 24), 25%);
-        color: $color;
-        @include futureCards(Button);
+        background-color: lighten(adjust-hue($HUEN, 24), 25%);
+        color: $HUEN;
+        @include futureCards(button);
         }
-        .text:hover {
-            background-color: darken(adjust-hue($color, 24), 25%);
+        // For the answers
+        .Button.text:hover {
+            background-color: darken(adjust-hue($HUEN, 24), 69%);
+            
+            &.correct:hover {
+                background-color: green;
+            }
+
+            &.wrong:hover {
+                background-color: red;
+            }
+        }
+        //For the start and Next Q
+        .Button:hover{
+            background-color: darken(adjust-hue($HUEN, 24), 69%);
         }
     }
 }
@@ -37,7 +50,7 @@ $Qmargin: 1rem 3rem 1rem;
     border-radius: 0.625rem;
     padding: 0.625rem;
     box-shadow: 0 0 0.625rem 0.125rem;
-    .#{$n} {
+    #{$n} {
         cursor: pointer;
     }
     
@@ -60,6 +73,11 @@ div.Button {
 .start, .Button {
     justify-content: space-evenly;
     display: flex;
+
+}
+
+.H {
+    display: none;
 }
 
 #Q {

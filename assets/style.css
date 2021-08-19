@@ -14,10 +14,16 @@ body {
     border-radius: 0.625rem;
     padding: 0.625rem;
     box-shadow: 0 0 0.625rem 0.125rem; }
-    body main > div .Button, body main .start .Button .Button, body main .text .Button {
+    body main > div button, body main .start .Button button, body main .text button {
       cursor: pointer; }
-  body main .text:hover {
-    background-color: rgba(80, 91, 12, 0.794); }
+  body main .Button.text:hover {
+    background-color: rgba(0, 0, 0, 0.794); }
+    body main .Button.text:hover.correct:hover {
+      background-color: green; }
+    body main .Button.text:hover.wrong:hover {
+      background-color: red; }
+  body main .Button:hover {
+    background-color: rgba(0, 0, 0, 0.794); }
 
 div.Button {
   flex-direction: row;
@@ -29,6 +35,9 @@ div.Button {
 .start, .Button {
   justify-content: space-evenly;
   display: flex; }
+
+.H {
+  display: none; }
 
 #Q {
   text-align: center;
