@@ -1,11 +1,19 @@
 
 $bs: border-box;
+$padd: 2rem 4rem 2rem 4rem;
 @mixin buttons {
     display: flex;
-    justify-content: center;
-    height: 3rem;
-    width: 3rem;
-    background-color: red;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 10rem;
+    align-self: center;
+    width: 13rem;
+    padding: $padd;
+
+    :hover {  
+        background-color: aqua;
+    }
 }
 
 * {
@@ -19,6 +27,6 @@ h1 {
 }
 
 div {
-    @include buttons() ;
+    @include buttons;
 }
 

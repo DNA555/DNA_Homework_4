@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box; }
+
+h1 {
+  height: 50%;
+  width: 50%;
+  align-items: center; }
+
+div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 10rem;
+  align-self: center;
+  width: 13rem;
+  padding: 2rem 4rem 2rem 4rem; }
+  div :hover {
+    background-color: aqua; }

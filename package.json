@@ -1,0 +1,23 @@
+{
+  "name": "dna_4",
+  "version": "1.0.0",
+  "description": "Trying to get my scss to compile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles": "node-sass -w ./assets/style.scss -o ./assets"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DNA555/DNA_Homework_4.git"
+  },
+  "author": "David N. Adams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DNA555/DNA_Homework_4/issues"
+  },
+  "homepage": "https://github.com/DNA555/DNA_Homework_4#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
