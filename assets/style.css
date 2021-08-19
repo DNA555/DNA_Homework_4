@@ -1,19 +1,34 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box; }
 
-h1 {
-  height: 50%;
-  width: 50%;
-  align-items: center; }
-
-div {
+body {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vw;
+  height: 100vh; }
+  body main > div, body main .start .Button, body main .text {
+    background-color: rgba(154, 181, 226, 0.794);
+    color: rgba(56, 164, 197, 0.794);
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+    box-shadow: 0 0 0.625rem 0.125rem; }
+    body main > div .Button, body main .start .Button .Button, body main .text .Button {
+      cursor: pointer; }
+  body main .text:hover {
+    background-color: rgba(28, 53, 98, 0.794); }
+
+div.Button {
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: 10rem;
   align-self: center;
-  width: 13rem;
   padding: 2rem 4rem 2rem 4rem; }
-  div :hover {
-    background-color: aqua; }
+
+.start, .Button {
+  justify-content: space-evenly;
+  display: flex; }
+
+#Q {
+  text-align: center;
+  margin: 1rem 3rem 1rem; }

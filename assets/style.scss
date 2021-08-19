@@ -1,32 +1,68 @@
-
-$bs: border-box;
+$HUEN: 200;
+$HUEW: 0;
+$HUEC: 145;
 $padd: 2rem 4rem 2rem 4rem;
-@mixin buttons {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    height: 10rem;
-    align-self: center;
-    width: 13rem;
-    padding: $padd;
+$Qmargin: 1rem 3rem 1rem;
+@mixin colormatchtheme($name, $color) {
+    #{$name} {
+        >div, .start .Button, .text {
+        // "Hey patrick know what's funnier than 24.....25.
+        background-color: lighten(adjust-hue($color, 24), 25%);
+        color: $color;
+        @include futureCards(Button);
+        }
+        .text:hover {
+            background-color: darken(adjust-hue($color, 24), 25%);
 
-    :hover {  
-        background-color: aqua;
+        }
     }
 }
 
-* {
-    box-sizing: $bs;
+@mixin buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: center;
+    padding: $padd;
 }
 
-h1 {
-    height: 50%;
-    width: 50%;
+@mixin centeredContent {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    height: 100vw;
+    height:100vh;
 }
 
-div {
+@mixin futureCards($n) {
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+    box-shadow: 0 0 0.625rem 0.125rem;
+    .#{$n} {
+        cursor: pointer;
+    }
+    
+}
+
+*, *::before ,*::after {
+    box-sizing: border-box;
+}
+
+body {
+    @include centeredContent;
+    @include colormatchtheme(main ,rgba(56, 164, 197, 0.794));
+}
+
+div.Button {
     @include buttons;
 }
 
+.start, .Button {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+#Q {
+    text-align: center;
+    margin: $Qmargin;
+}

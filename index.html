@@ -6,23 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./assets/style.css" />
   <title>Code Quiz</title>
-  <script src="./assets/script.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./assets/script.js"></script>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
   <main>
-
-    <h1>Start</h1>
-      
     <div>
+      <div class="start">
+        <button class="Button"><h2>Start</h2></button>
+        <button class="Button"><h2>Next Q</h2></button>  
+      </div>
+      <div  id="Q-contain" class="H">
 
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      
+        <div id="Q">Q's</div>
+
+        <div id="A-b" class="Grid">
+
+          <button class="Button text">A.</button>
+          <button class="Button text">B.</button>
+          <button class="Button text">C.</button>
+          <button class="Button text">D.</button>
+          <button class="Button text">E.</button>
+
+        </div>
+      </div>
     </div>
-
-    </main>
+  </main>
 </body>
