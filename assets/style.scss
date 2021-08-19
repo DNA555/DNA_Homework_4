@@ -1,0 +1,24 @@
+
+$bs: border-box;
+@mixin buttons {
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    background-color: red;
+}
+
+* {
+    box-sizing: $bs;
+}
+
+h1 {
+    height: 50%;
+    width: 50%;
+    align-items: center;
+}
+
+div {
+    @include buttons() ;
+}
+
