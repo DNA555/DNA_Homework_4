@@ -13,7 +13,6 @@ $Qmargin: 1rem 3rem 1rem;
         }
         .text:hover {
             background-color: darken(adjust-hue($color, 24), 25%);
-
         }
     }
 }
@@ -50,7 +49,8 @@ $Qmargin: 1rem 3rem 1rem;
 
 body {
     @include centeredContent;
-    @include colormatchtheme(main ,rgba(56, 164, 197, 0.794));
+    @include colormatchtheme(main ,rgba(204, 157, 26, 0.794));
+    background-color: hsl(69, 100, 20);
 }
 
 div.Button {
