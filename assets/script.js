@@ -1,13 +1,15 @@
-const rootEl = $('#root');
-const quest = $("#Exam"); // Grab the container that holds 
+const ex = $("#Exam"); // Grab the container that holds the Exam 
 const q = $("#Q"); // Grab Question I.D. that'll hold the actual question
-const nex = $("#nex");
+const nex = $("#nex"); // Grab the container that holds the Next button
 const startB = $("#startb");
 //const answerChoices = $("") 
 let Qs = [
     {
         qs: "What is jQuery",
         ans: [
+            "A seperate language",
+            "A library for the J programming language",
+            ""
 
         ]
     }
@@ -16,14 +18,16 @@ let Qs = [
 
 // Create a function whereby when I "click" the 'Start' button
 function start() {
-    // Add the class with a hide attribute, "display: none;" so that the start button is hidden.
-    $(startB).addClass("H");
-    // Remove the hide attribute so that the proper items show.
-    $(quest).removeClass("H");
-    $(nex).removeClass("H");
+    $(ex).show(); // Has class H therefore will be hidden on load
+    $(q).show(); // Has class H therefore will be hidden on load
+    $(nex).show(); // Has class H therefore will be hidden on load
+    $(startB).hide()
+    
     // After set up go on and call for the next question.
     next();
 }
+
+
 
 function next() {
 
@@ -32,5 +36,4 @@ function next() {
 function ans() {
 
 }
-
 $(startB).click(start);
