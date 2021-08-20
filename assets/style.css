@@ -25,11 +25,12 @@ body {
   body main .Button:hover {
     background-color: rgba(0, 0, 0, 0.794); }
 
-div.Button {
-  flex-direction: row;
+div.Button, #A-b {
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-self: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 2rem 4rem 2rem 4rem; }
 
 .start, .Button {
@@ -39,6 +40,9 @@ div.Button {
 .H {
   display: none; }
 
-#Q {
+#Exam {
   text-align: center;
+  margin: 1rem 3rem 1rem; }
+
+.Button.text {
   margin: 1rem 3rem 1rem; }

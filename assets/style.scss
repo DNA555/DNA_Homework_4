@@ -31,10 +31,11 @@ $Qmargin: 1rem 3rem 1rem;
 }
 
 @mixin buttons {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
     padding: $padd;
 }
 
@@ -66,21 +67,24 @@ body {
     background-color: hsl(69, 100, 20);
 }
 
-div.Button {
+div.Button, #A-b {
     @include buttons;
 }
 
 .start, .Button {
     justify-content: space-evenly;
     display: flex;
-
 }
 
 .H {
     display: none;
 }
 
-#Q {
+#Exam {
     text-align: center;
+    margin: $Qmargin;
+}
+
+.Button.text {
     margin: $Qmargin;
 }
